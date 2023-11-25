@@ -41,7 +41,7 @@ bot = telebot.TeleBot(TOKEN, threaded=True, num_threads=5)
 
 Base = declarative_base()
 engine = create_engine(
-    os.getenv("DATABASE_URL"),
+    os.getenv("postgresql://postgres:cbfG4CeE*EADDG3FBbAaEECE6bdBadD5@roundhouse.proxy.rlwy.net:19864/railway"),
     echo=False)
 
 # import importdir
