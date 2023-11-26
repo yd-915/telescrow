@@ -23,8 +23,8 @@ def checkWebhook():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=WEBHOOK_URL + "/" + TOKEN)
-    return "Btcpay-Escrow Bot running!", 200
+    bot.set_webhook(url=https://bitscrow.onrender.com + "/" + TOKEN)
+    return "Bitscrow Bot running!", 200
 
 
 def run_web():
