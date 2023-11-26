@@ -81,10 +81,10 @@ class Dispute(Base):
 
     id = Column(String(20), primary_key=True)
     user_id = Column(String(20), ForeignKey("users.id"))
-    user  = relationship("User", uselist=False, primaryjoin="Dispute.user_id == User.id")
+    user  = relationship("User", uselist=False, overlaps="dispute", primaryjoin="Dispute.user_id == User.id")
 
     trade_id = Column(String(20), ForeignKey("trades.id"))
-    trade = relationship("Trade", uselist=False, primaryjoin="Dispute.trade_id == Trade.id")
+    trade = relationship("Trade", uselist=False, overlaps="dispute", primaryjoin="Dispute.trade_id == Trade.id")
     complaint = Column(String(50))
     is_resolved = Column(Boolean())
     created_at = Column(DateTime())
