@@ -23,7 +23,7 @@ def checkWebhook():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=https://bitscrow.onrender.com + "/" + TOKEN)
+    bot.set_webhook(url="https://bitscrow.onrender.com" + "/" + TOKEN)
     return "Bitscrow Bot running!", 200
 
 
